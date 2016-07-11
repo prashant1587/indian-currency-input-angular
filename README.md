@@ -33,8 +33,13 @@ is-reqd:form validation required field
 
 #Filters addCommas
 
-in html:{{10000|addCommas}}
-in JS:$filter('addCommas')(10000);
+in html:{{100000|addCommas}}
 
-in html:{{10000|amountToString}}
-in JS:$filter('amountToString')(10000);
+in JS:$filter('addCommas')(100000);
+
+output: 1,00,000.
+
+#Filters amountToString
+in html:{{100000|amountToString}}
+in JS:$filter('amountToString')(100000);
+output: 1Lac.
