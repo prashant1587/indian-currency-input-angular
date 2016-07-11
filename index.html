@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="indianCurrency">  
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+    
+    <title>Currency Input box</title>
+</head>
+<body>
+<div><only-num-add-commas
+                                input-name="amount" add-class="cover-input"
+                                det="totalPayout" place-text="Total payout desired"
+                                change-values="" min-length="0"
+                                max-length="12"
+                                get-focus-out=""
+                                is-reqd="true" /></div>
+                                <div>
+                                Amount converted to string
+                                {{100000|amountToString}}
+                                {{amount|amountToString}}
+                                </div>
+                                <div>
+                                Commas Added To number
+                                {{10000|addCommas}}
+                                </div>
+<script src="node_modules/angular/angular.js"></script>
+<script src="scripts/currencyApp.js"></script>
+</body>
+</html>
+
