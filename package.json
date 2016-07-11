@@ -1,0 +1,24 @@
+{
+  "name": "indiancurrencyangular",
+  "version": "1.0.0",
+  "description": "Angular input indian currency directive",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prashant1587/indian-curreny-angular.git"
+  },
+  "keywords": [
+    "angular",
+    "indian-currency",
+    "directive"
+  ],
+  "author": "Prashant Sharma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/prashant1587/indian-curreny-angular/issues"
+  },
+  "homepage": "https://github.com/prashant1587/indian-curreny-angular#readme"
+}
