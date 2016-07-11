@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/prashant1587/indian-curreny-angular/issues"
   },
-  "homepage": "https://github.com/prashant1587/indian-curreny-angular#readme"
+  "homepage": "https://github.com/prashant1587/indian-curreny-angular#readme",
+  "dependencies": {
+    "angular": "^1.5.7"
+  }
 }
