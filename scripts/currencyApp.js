@@ -6,7 +6,7 @@
 angular.module('indianCurrency',[]);
 
 
-angular.module('indianCurrency').service('indianCurrency.currencyService',function(){
+angular.module('indianCurrency').service('currencyService',function(){
 	
     // Round to places
     this.wacky_round = function(number, places){
@@ -19,7 +19,9 @@ angular.module('indianCurrency').service('indianCurrency.currencyService',functi
     // Remove commas from a number
     this.removeCommas = function(x){
         var returnedAmount = 0;
-        x = x.toString();
+        if(x!==undefined && x !==null){
+            x = x.toString();
+        }
         if(x!==undefined && x !==null && x.match(/\d+/g)!=null){
             returnedAmount = isNaN(x)?x.replace(/,/g, ''):x;
         }
@@ -133,7 +135,7 @@ angular.module('indianCurrency').filter('addCommas', function () {
 });
 
 // filter to convert amount to string
-angular.module('indianCurrency').filter('amountToString', ['indianCurrency.currencyService',function (currencyService) {
+angular.module('indianCurrency').filter('amountToString', ['currencyService',function (currencyService) {
     return function (value) {
 	   return currencyService.convertAmountToWords(value);
     }
