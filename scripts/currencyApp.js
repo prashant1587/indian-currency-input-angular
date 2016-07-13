@@ -113,7 +113,7 @@ angular.module('indianCurrency').filter('addCommas', function () {
             if (value.toString().indexOf(',') != -1) {
                 value = value.replace(/,/g, '');
             }
-            if (value !== undefined) {
+            
                 value = value.toString().replace(/,/g, '');
                 value += '';
                 var x = value.split('.');
@@ -122,13 +122,13 @@ angular.module('indianCurrency').filter('addCommas', function () {
                 var lastThree = x1.substring(x1.length - 3);
 
                 var otherNumbers = x1.substring(0, x1.length - 3);
-                if (otherNumbers !== '')
+                if (otherNumbers !== ''){
                     lastThree = ',' + lastThree;
+                }
                 var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
                 return res + x2;
-            } else {
-                return "";
-            }
+        }else{
+            return "";
         }
 
     };

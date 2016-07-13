@@ -19,10 +19,20 @@ describe('Indian Currency Module', function() {
 	  		  res = filter('addCommas')(value);
 	  		  expect(res).toEqual('1,00,000');
 	  	  });
+	  	  it('check for comma added value',function(){
+	  		  var value = '1,00,000',res;
+	  		  res = filter('addCommas')(value);
+	  		  expect(res).toEqual('1,00,000');
+	  	  });
 	  	  it('check for crore',function(){
 	  		  var value = '10000000',res;
 	  		  res = filter('addCommas')(value);
 	  		  expect(res).toEqual('1,00,00,000');
+	  	  });
+	  	  it('check for undefined',function(){
+	  		  var res;
+	  		  res = filter('addCommas')();
+	  		  expect(res).toEqual('');
 	  	  });
 	  	});
 
