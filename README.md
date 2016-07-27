@@ -1,4 +1,4 @@
-# indian-curreny-angular
+# indian-currency-angular
 Angular module for indian currency input box directive and amount converted to words filters
 
 
